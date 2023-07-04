@@ -1,6 +1,7 @@
 ## Method
 {:#Method}
 
+<span class="comment" data-author="RT">The approach definitely makes sense to me. However, I would suggest to present it in a different way (I'm aware that this is a draft atm). Currently, your "Method" section is actually more of an "Experimental Setup" section, since you talk about how to evaluate which priorities perform best. My suggestion would be to explain your approach/method (link sources, ...) in this "Method" section, and move all of the experimental setup things (5012 combinations for one query, best combinations for all queries, ...) to a new "Evaluation" section.</span>
 
 While we expect that prioritizing links that are more likely relevant to the query result will improve the result arrival times, it is unclear which order of prioritization is optimal. 
 Thus, we create link prioritization strategies in two ways. First, we determine an order and variations on that order that logically seem to make sense. 
@@ -60,6 +61,9 @@ In addition to the link priorities obtained by reasoning over the semantics of t
 In this experiment, we enumerate all 5012 combinations of priorities on a single query and use the link priorities that obtained the a first result in the least time, and the priority with the highest diefficiency metric (CITE HERE). 
 Note that while these priorities will be the most performant on a singular query, we have no guarantee that this will generalize to all queries. 
 The two priorities obtained from the enumeration experiment are given in [](#tab:prioritiesEnum).
+
+<span class="comment" data-author="RT">These results seem very counter-intuitive. Are you sure they are correct? They seem to be the opposite to what we intuitively would expect. How large are the exec time differences? Perhaps the differences are too small (for this query)?</span>
+
 <figure id="tab:prioritiesEnum" class="table" markdown="1">
 
 |                 | Type | SameAs | SeeAlso | Contains | Storage | TopicOf | CMatch |
